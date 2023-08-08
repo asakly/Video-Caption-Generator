@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+        /* Adding some styling for vertical alignment and the cool header */
+        .upload-container {
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertical centering */
+        }
+
+        .upload-form {
+            text-align: center; /* Centering the elements inside the form */
+        }
+
+        .cool-header {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px; /* Providing space between the header and the form */
+        }
+
+        .upload-btn {
+            font-size: 1.5em; /* Enlarging the font */
+            padding: 10px 20px; /* More padding to enlarge the button */
+        }
+    </style>
+</head>
+<body>
+    <div class="container upload-container">
+        <div class="cool-header text-center">Upload Video</div>
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <div class="form-group">
+                <input type="file" name="video" class="form-control-file mb-3"> <!-- mb-3 for margin bottom -->
+            </div>
+            <button type="submit" class="btn btn-primary upload-btn">Upload</button>
+        </form>
+    </div>
+</body>
+{% endblock %}
