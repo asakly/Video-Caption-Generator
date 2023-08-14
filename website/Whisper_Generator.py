@@ -39,7 +39,7 @@ def transcribe_and_burn_subtitles(input_video_path):
     subprocess.run(command)
 
     # Remove the original video and SRT file
-    # os.remove(input_video_path)
+    os.remove(input_video_path)
     os.remove(srt_path)
 
     # Return the path to the new video with subtitles
